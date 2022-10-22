@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white-color: hsl(0, 0%, 100%);
+}
+body{
+    font-size: 14px;
+    /* font-family: 'Fraunces', serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--white-color);
+}
+.card--left,
+.card--right{
+    width: 50%;
+}
+.card--left img{
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+}
+
+.card--right{
+    padding: 36px;
+}
+.card--right .subTitle{
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+.card--right h1{
+    font-family: 'Fraunces', serif;
+    margin: 16px auto;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+.card--right p{
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    line-height: 1.4rem;
+}
+.item__price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 24px auto;
+    gap: 24px;
+}
+.price--sale{
+    font-size: 1.8rem;
+    color: var(--dark-cyan) !important;
+    font-weight: 700 !important;
+    font-family: 'Fraunces', serif;
+}
+.price{
+    text-decoration: line-through;
+}
+.card--right button{
+    border: none;
+    width: 100%;
+    background: var(--dark-cyan);
+    color: var(--white-color);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.card--right button:active,
+.card--right button:hover,
+.card--right button:focus{
+    background: hsl(158, 77%, 12%);
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .card{
+        width: 90%;
+        flex-direction: column;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .card--left,
+    .card--right{
+        width: 100%;
+    }
+}
